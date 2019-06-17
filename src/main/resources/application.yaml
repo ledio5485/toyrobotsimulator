@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: toy-robot-simulator
+  profiles:
+    active: test
+
+server:
+  servlet:
+    context-path: /${spring.application.name}
+
+board-config:
+  rows: 5
+  columns: 5
