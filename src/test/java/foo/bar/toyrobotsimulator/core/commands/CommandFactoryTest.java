@@ -3,12 +3,19 @@ package foo.bar.toyrobotsimulator.core.commands;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import foo.bar.toyrobotsimulator.rest.dto.*;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+@RunWith(SpringRunner.class)
+@SpringBootTest
 public class CommandFactoryTest {
 
-    private final CommandFactory sut = new CommandFactory(new ObjectMapper());
+    @Autowired
+    private CommandFactory sut;
 
     @Test
     public void shouldCreatePlaceCommand() {

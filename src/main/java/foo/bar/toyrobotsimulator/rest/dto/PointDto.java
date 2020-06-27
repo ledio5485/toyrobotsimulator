@@ -1,14 +1,9 @@
 package foo.bar.toyrobotsimulator.rest.dto;
 
-import java.util.Objects;
-
 public final class PointDto {
 
-    private int x;
-    private int y;
-
-    public PointDto() {
-    }
+    private final int x;
+    private final int y;
 
     public PointDto(int x, int y) {
         this.x = x;

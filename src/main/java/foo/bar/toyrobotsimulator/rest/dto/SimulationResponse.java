@@ -1,11 +1,11 @@
 package foo.bar.toyrobotsimulator.rest.dto;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+
 public class SimulationResponse {
-    private PositionDto position;
+    private final PositionDto position;
 
-    public SimulationResponse() {
-    }
-
+    @JsonCreator
     public SimulationResponse(PositionDto position) {
         this.position = position;
     }

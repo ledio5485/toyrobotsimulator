@@ -4,12 +4,9 @@ import java.time.ZonedDateTime;
 
 class ApiError {
 
-    private int httpStatus;
-    private String message;
-    private ZonedDateTime timestamp = ZonedDateTime.now();
-
-    public ApiError() {
-    }
+    private final int httpStatus;
+    private final String message;
+    private final ZonedDateTime timestamp = ZonedDateTime.now();
 
     ApiError(int httpStatus, String message) {
         this.httpStatus = httpStatus;
@@ -20,16 +17,8 @@ class ApiError {
         return httpStatus;
     }
 
-    public void setHttpStatus(int httpStatus) {
-        this.httpStatus = httpStatus;
-    }
-
     public String getMessage() {
         return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
     }
 
     public ZonedDateTime getTimestamp() {

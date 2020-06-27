@@ -5,14 +5,12 @@ import javax.validation.constraints.NotNull;
 public class CommandDto<T> {
 
     @NotNull
-    private CommandName name;
-    private T args;
-
-    public CommandDto() {
-    }
+    private final CommandName name;
+    private final T args;
 
     public CommandDto(CommandName name) {
         this.name = name;
+        this.args = null;
     }
 
     public CommandDto(CommandName name, T args) {

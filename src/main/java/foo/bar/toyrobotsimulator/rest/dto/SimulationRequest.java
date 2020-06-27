@@ -1,14 +1,14 @@
 package foo.bar.toyrobotsimulator.rest.dto;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+
 import java.util.Collections;
 import java.util.List;
 
 public class SimulationRequest {
-    private List<CommandDto> commands;
+    private final List<CommandDto> commands;
 
-    public SimulationRequest() {
-    }
-
+    @JsonCreator
     public SimulationRequest(List<CommandDto> commands) {
         this.commands = commands;
     }
